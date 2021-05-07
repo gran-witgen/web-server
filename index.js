@@ -37,6 +37,8 @@ app.post("/api/v1/quiz",  function(req, res){
 })
 
 // アプリ起動後のログ確認用
-app.listen(3000, function(){
+// heroku用のポートを参照、ローカルで動く際は3000を参照
+const PORT = process.env.PORT || 3000
+app.listen(PORT, function(){
     console.log("runnning!")
 })
